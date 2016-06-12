@@ -42,3 +42,14 @@ def add_stock_base_info(data):
     cursor.close()
     conn.commit()
     conn.close()
+
+
+def get_stock_list():
+    conn = sqlite3.connect('stock_base.db')
+    cursor = conn.cursor()
+    sql = 'select code, name from stock_base'
+    cursor.execute(sql)
+    value = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    return value
