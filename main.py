@@ -28,7 +28,7 @@ def cre_stock_base_db(stock_list):
         for rows in stock_list['rows']:
             dbProvider.add_stock_base_info(rows)
             code = rows['code']
-            dbProvider.createIndividStockDB(code)
+            dbProvider.createIndividStockDB("'" + code + "'")
             i = i + 1
             print(i, code)
 
@@ -39,7 +39,7 @@ def cre_stock_base_db(stock_list):
 def loop_xueqiu():
     url1= 'https://xueqiu.com/S/%s/follows'
     url2 = 'http://qt.gtimg.cn/q='
-    stocklist = db.get_stock_list()
+    stocklist = dbProvider.get_stock_list()
     for stock in stocklist:
         code = stock[0]
         if code[0] == '6':
@@ -66,7 +66,7 @@ def loop_xueqiu():
         # print(b[0], code)
 
 def creDB():
-    stocklist = db.get_stock_list()
+    stocklist = dbProvider.get_stock_list()
     for stock in stocklist:
         code = stock[0]
         if code[0] == '6':

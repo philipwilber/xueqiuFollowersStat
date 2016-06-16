@@ -1,8 +1,6 @@
 import sqlite3
 
 class DBProvider(object):
-    def __init__(self):
-
 
     def dbConn(self):
         self.conn = sqlite3.connect('IDB_MAIN.db')
@@ -21,13 +19,14 @@ class DBProvider(object):
               
             n = cursor.execute(sql)
             return n
-        except sqlite3.Error,e:
+        except sqlite3.Error:
+            print('')
             
 
     def createStockDB(self):
         try:
             if(self.conn != None):
-                cursor = self.cursor.cursor()
+                cursor = self.conn.cursor()
             else:
                 raise sqlite3.Error('Connection Error')
 
@@ -52,13 +51,13 @@ class DBProvider(object):
             cursor.execute(sql)
             self.conn.commit()
             cursor.close()
-        except sqlite3.Error,e:
+        except sqlite3.Error:
             self.conn.rollback()
 
     def createIndividStockDB(self, stockCode):
         try:
             if(self.conn != None):
-                cursor = self.cursor.cursor()
+                cursor = self.conn.cursor()
             else:
                 raise sqlite3.Error('Connection Error')
 
@@ -107,13 +106,13 @@ class DBProvider(object):
             cursor.execute(sql)
             self.conn.commit()
             cursor.close()
-        except sqlite3.Error,e:
+        except sqlite3.Error:
             self.conn.rollback()
     
     def add_stock_base_info(self, data):
         try:
             if(self.conn != None):
-                cursor = self.cursor.cursor()
+                cursor = self.conn.cursor()
             else:
                 raise sqlite3.Error('Connection Error')
 
@@ -127,18 +126,25 @@ class DBProvider(object):
             cursor.execute(sql)
             self.conn.commit()
             cursor.close()
-        except sqlite3.Error,e:
+        except sqlite3.Error:
             self.conn.rollback()
 
     def get_stock_list(self, db):
-    conn = sqlite3.connect('stock_base.db')
-    cursor = conn.cursor()
-    sql = 'select code, name from stock_base'
-    cursor.execute(sql)
-    value = cursor.fetchall()
-    cursor.close()
-    conn.close()
-    return value
+        try:
+            if (self.conn != None):
+                cursor = self.conn.cursor()
+            else:
+                raise sqlite3.Error('Connection Error')
+
+                sql = 'select code, name from stock_base'
+            cursor.execute(sql)
+            self.conn.commit()
+            value = cursor.fetchall()
+            cursor.close()
+            return value
+        except sqlite3.Error:
+            self.conn.rollback()
+
 
 
 
