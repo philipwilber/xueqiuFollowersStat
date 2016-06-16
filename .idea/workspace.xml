@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="03b99cee-8a05-46fa-97e6-c366c8a21e92" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IDB_MAIN.db-journal" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IDB_MAIN.db" afterPath="$PROJECT_DIR$/IDB_MAIN.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/xueqiuFollowerStat.iml" afterPath="$PROJECT_DIR$/.idea/xueqiuFollowerStat.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.py" afterPath="$PROJECT_DIR$/db.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-    </list>
+    <list default="true" id="03b99cee-8a05-46fa-97e6-c366c8a21e92" name="Default" comment="" />
     <ignored path="xueqiuFollowerStat.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -38,8 +30,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+            <state relative-caret-position="210">
+              <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
               <folding>
                 <element signature="e#1#22#0" expanded="true" />
               </folding>
@@ -63,11 +55,11 @@
             <state relative-caret-position="225">
               <caret line="42" column="41" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
               <folding>
-                <marker date="1466094225000" expanded="true" signature="776:1765" placeholder="create table... stock_base" />
-                <marker date="1466094225000" expanded="true" signature="2197:4616" placeholder="create table... missing_value" />
-                <marker date="1466094225000" expanded="true" signature="2197:4655" placeholder="create table... missing_value" />
-                <marker date="1466094225000" expanded="true" signature="5058:5310" placeholder="insert into stock_base... " />
-                <marker date="1466094225000" expanded="true" signature="6034:6067" placeholder="select code,... stock_base" />
+                <marker date="1466097320000" expanded="true" signature="776:1765" placeholder="create table... stock_base" />
+                <marker date="1466097320000" expanded="true" signature="2197:4616" placeholder="create table... missing_value" />
+                <marker date="1466097320000" expanded="true" signature="2197:4655" placeholder="create table... missing_value" />
+                <marker date="1466097320000" expanded="true" signature="5058:5310" placeholder="insert into stock_base... " />
+                <marker date="1466097320000" expanded="true" signature="6034:6067" placeholder="select code,... stock_base" />
               </folding>
             </state>
           </provider>
@@ -441,7 +433,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3437014" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3437014" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -515,11 +507,11 @@
         <state relative-caret-position="405">
           <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
           <folding>
-            <marker date="1466094225000" expanded="true" signature="776:1765" placeholder="create table... stock_base" />
-            <marker date="1466094225000" expanded="true" signature="2197:4616" placeholder="create table... missing_value" />
-            <marker date="1466094225000" expanded="true" signature="2197:4655" placeholder="create table... missing_value" />
-            <marker date="1466094225000" expanded="true" signature="5058:5310" placeholder="insert into stock_base... " />
-            <marker date="1466094225000" expanded="true" signature="6034:6067" placeholder="select code,... stock_base" />
+            <marker date="1466097320000" expanded="true" signature="776:1765" placeholder="create table... stock_base" />
+            <marker date="1466097320000" expanded="true" signature="2197:4616" placeholder="create table... missing_value" />
+            <marker date="1466097320000" expanded="true" signature="2197:4655" placeholder="create table... missing_value" />
+            <marker date="1466097320000" expanded="true" signature="5058:5310" placeholder="insert into stock_base... " />
+            <marker date="1466097320000" expanded="true" signature="6034:6067" placeholder="select code,... stock_base" />
           </folding>
         </state>
       </provider>
@@ -539,11 +531,11 @@
         <state relative-caret-position="435">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
-            <marker date="1466094225000" expanded="true" signature="776:1765" placeholder="create table... stock_base" />
-            <marker date="1466094225000" expanded="true" signature="2197:4616" placeholder="create table... missing_value" />
-            <marker date="1466094225000" expanded="true" signature="2197:4655" placeholder="create table... missing_value" />
-            <marker date="1466094225000" expanded="true" signature="5058:5310" placeholder="insert into stock_base... " />
-            <marker date="1466094225000" expanded="true" signature="6034:6067" placeholder="select code,... stock_base" />
+            <marker date="1466097320000" expanded="true" signature="776:1765" placeholder="create table... stock_base" />
+            <marker date="1466097320000" expanded="true" signature="2197:4616" placeholder="create table... missing_value" />
+            <marker date="1466097320000" expanded="true" signature="2197:4655" placeholder="create table... missing_value" />
+            <marker date="1466097320000" expanded="true" signature="5058:5310" placeholder="insert into stock_base... " />
+            <marker date="1466097320000" expanded="true" signature="6034:6067" placeholder="select code,... stock_base" />
           </folding>
         </state>
       </provider>
@@ -563,11 +555,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1466094225000" expanded="true" signature="776:1765" placeholder="create table... stock_base" />
-            <marker date="1466094225000" expanded="true" signature="2197:4616" placeholder="create table... missing_value" />
-            <marker date="1466094225000" expanded="true" signature="2197:4655" placeholder="create table... missing_value" />
-            <marker date="1466094225000" expanded="true" signature="5058:5310" placeholder="insert into stock_base... " />
-            <marker date="1466094225000" expanded="true" signature="6034:6067" placeholder="select code,... stock_base" />
+            <marker date="1466097320000" expanded="true" signature="776:1765" placeholder="create table... stock_base" />
+            <marker date="1466097320000" expanded="true" signature="2197:4616" placeholder="create table... missing_value" />
+            <marker date="1466097320000" expanded="true" signature="2197:4655" placeholder="create table... missing_value" />
+            <marker date="1466097320000" expanded="true" signature="5058:5310" placeholder="insert into stock_base... " />
+            <marker date="1466097320000" expanded="true" signature="6034:6067" placeholder="select code,... stock_base" />
           </folding>
         </state>
       </provider>
@@ -585,19 +577,19 @@
         <state relative-caret-position="225">
           <caret line="42" column="41" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
           <folding>
-            <marker date="1466094225000" expanded="true" signature="776:1765" placeholder="create table... stock_base" />
-            <marker date="1466094225000" expanded="true" signature="2197:4616" placeholder="create table... missing_value" />
-            <marker date="1466094225000" expanded="true" signature="2197:4655" placeholder="create table... missing_value" />
-            <marker date="1466094225000" expanded="true" signature="5058:5310" placeholder="insert into stock_base... " />
-            <marker date="1466094225000" expanded="true" signature="6034:6067" placeholder="select code,... stock_base" />
+            <marker date="1466097320000" expanded="true" signature="776:1765" placeholder="create table... stock_base" />
+            <marker date="1466097320000" expanded="true" signature="2197:4616" placeholder="create table... missing_value" />
+            <marker date="1466097320000" expanded="true" signature="2197:4655" placeholder="create table... missing_value" />
+            <marker date="1466097320000" expanded="true" signature="5058:5310" placeholder="insert into stock_base... " />
+            <marker date="1466097320000" expanded="true" signature="6034:6067" placeholder="select code,... stock_base" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+        <state relative-caret-position="210">
+          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
           <folding>
             <element signature="e#1#22#0" expanded="true" />
           </folding>
