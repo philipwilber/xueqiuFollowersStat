@@ -145,6 +145,27 @@ class DBProvider(object):
         except sqlite3.Error:
             self.conn.rollback()
 
+    def add_stock_daliy(self, data):
+        try:
+            if (self.conn != None):
+                cursor = self.conn.cursor()
+            else:
+                raise sqlite3.Error('Connection Error')
+
+            sql = '''insert into stock_base (code,name,industry,area,pe,outstanding,totals,totalassets,
+             liquidassets,fixedassets,reserved,reservedpershare,eps,bvps,pb,timetomarket)
+             values ('%s','%s','%s','%s',%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,'%s')
+             ''' % (data['code'], data['name'], data['industry'], data['area'], data['pe'], data['outstanding'],
+                    data['totals'], data['totalassets'], data['liquidassets'], data['fixedassets'],
+                    data['reserved'], data['reservedpershare'], data['eps'], data['bvps'], data['pb'],
+                    data['timetomarket'])
+
+            cursor.execute(sql)
+            self.conn.commit()
+            cursor.close()
+        except sqlite3.Error:
+            self.conn.rollback()
+
 
 
 
