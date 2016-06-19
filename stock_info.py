@@ -1,79 +1,136 @@
 import json
 import re
 import urllib.request
-
 from bs4 import BeautifulSoup
 
-from app_const.app_consts import Const
-from db import DBProvider
+import threading
+import time
 
-dbProvider = DBProvider(object)
+import app_const.app_consts as const
+from db import DBProvider
 
 
 class StockInfo:
 
+    def __init__(self):
+        self.__dbProvider = DBProvider
+
     def stock_api_url(self):
-        url = Const.MAIL_PROTO_IMAP
-        header = Const.STOCK_API_HEADER
+        url = const.MAIL_PROTO_IMAP
+        header = const.STOCK_API_HEADER
         req = urllib.request.Request(url=url, headers=header)
         data = urllib.request.urlopen(req).read().decode('utf-8')
         return json.loads(data)
 
     def get_url(self, url):
-        header = {
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36'}
+        header = const.URL_HEADER
         req = urllib.request.Request(url=url, headers=header)
         return urllib.request.urlopen(req).read()
 
     def cre_stock_base_db(self, stock_list):
         i = 0
         for rows in stock_list['rows']:
-            dbProvider.add_stock_base_info(rows)
+            self.__dbProvider.add_stock_base_info(rows)
             code = rows['code']
-            dbProvider.createIndividStockDB("'" + code + "'")
+            self.__dbProvider.createIndividStockDB("'" + code + "'")
             i = i + 1
             print(i, code)
 
             # print('%s=' % i,rows[i])
         print('-------------------------------')
 
-    def add_xueqiu_daily(self):
-        url1 = Const.XUEQIU_URL_1
+    def get_stock_list(self):
+        return self.__dbProvider.get_stock_list()
 
-        stocklist = dbProvider.get_stock_list()
+    def get_xueqiu_follows_daily(self, code):
+        url1 = const.XUEQIU_URL_1
+        if code == '6':
+            code = 'SH' + code
+        else:
+            code = 'SZ' + code
+
+        url1 = url1 % code
+        html_follows = self.get_url(url1)
+        soup_follows = BeautifulSoup(html_follows, 'lxml')
+        str_follows = soup_follows.find(
+            'div', {'class': 'stockInfo'}).contents
+        follows = re.search(r"\((.*?)\)", str(str_follows[1])).groups()
+
+        print(follows[0])
+        # print(b[0], code)
+
+    def __is_stock_daily_data_exited(self, table, date):
+        return self.__dbProvider.is_stock_daily_data_existed(table, date)
+
+    def get_stock_daily(self, code_full):
+        url = const.TENCENT_STOCK_URL_1
+        url = url + code_full
+        tempData = str(self.get_url(url.lower()))
+
+        if tempData == None:
+            time.sleep(10)
+            tempData = str(self.get_url(url.lower()))
+            return False
+
+        stock_data = {}
+        stockInfo = tempData.split('~')
+        if len(stockInfo) < 45:
+            return
+        if len(stockInfo) != 0 and stockInfo[0].find('pv_none') == -1 and stockInfo[3].find('0.00') == -1:
+            table = self.__stockTables['quotation']
+            code = stockInfo[2]
+            date = stockInfo[30]
+            if not self.__is_stock_daily_data_exited(table, date):
+                stock_data['code'] = stockInfo[2]
+                stock_data['name'] = stockInfo[1].decode('utf8')
+                stock_data['price'] = stockInfo[3]
+                stock_data['yesterday_close'] = stockInfo[4]
+                stock_data['today_open'] = stockInfo[5]
+                stock_data['volume'] = stockInfo[6]
+                stock_data['outer_sell'] = stockInfo[7]
+                stock_data['inner_buy'] = stockInfo[8]
+                stock_data['buy_one'] = stockInfo[9]
+                stock_data['buy_one_volume'] = stockInfo[10]
+                stock_data['buy_two'] = stockInfo[11]
+                stock_data['buy_two_volume'] = stockInfo[12]
+                stock_data['buy_three'] = stockInfo[13]
+                stock_data['buy_three_volume'] = stockInfo[14]
+                stock_data['buy_four'] = stockInfo[15]
+                stock_data['buy_four_volume'] = stockInfo[16]
+                stock_data['buy_five'] = stockInfo[17]
+                stock_data['buy_five_volume'] = stockInfo[18]
+                stock_data['sell_one'] = stockInfo[19]
+                stock_data['sell_one_volume'] = stockInfo[20]
+                stock_data['sell_two'] = stockInfo[22]
+                stock_data['sell_two_volume'] = stockInfo[22]
+                stock_data['sell_three'] = stockInfo[23]
+                stock_data['sell_three_volume'] = stockInfo[24]
+                stock_data['sell_four'] = stockInfo[25]
+                stock_data['sell_four_volume'] = stockInfo[26]
+                stock_data['sell_five'] = stockInfo[27]
+                stock_data['sell_five_volume'] = stockInfo[28]
+                stock_data['datetime'] = stockInfo[30]
+                stock_data['updown'] = stockInfo[31]
+                stock_data['updown_rate'] = stockInfo[32]
+                stock_data['heighest_price'] = stockInfo[33]
+                stock_data['lowest_price'] = stockInfo[34]
+                stock_data['volume_amout'] = stockInfo[35].split('/')[2]
+                stock_data['turnover_rate'] = stockInfo[38]
+                stock_data['pe_rate'] = stockInfo[39]
+                stock_data['viberation_rate'] = stockInfo[42]
+                stock_data['circulated_stock'] = stockInfo[43]
+                stock_data['total_stock'] = stockInfo[44]
+                stock_data['pb_rate'] = stockInfo[45]
+                return stock_data
+
+    def add_daily_data(self):
+        stocklist = self.get_stock_list()
         for stock in stocklist:
             code = stock[0]
             if code[0] == '6':
                 code_full = 'SH' + code
             else:
                 code_full = 'SZ' + code
-
-            url_follows = url1 % code_full
-            html_follows = self.get_url(url_follows)
-            soup_follows = BeautifulSoup(html_follows, 'lxml')
-            str_follows = soup_follows.find('div', {'class': 'stockInfo'}).contents
-            follows = re.search(r"\((.*?)\)", str(str_follows[1])).groups()
-
-
-
-            # stock daily info
-            # data_follows = xueqiu_url(url_info+code_full)
-            print(follows[0])
-            # print(b[0], code)
-
-    def get_stock_daily(self, code_full):
-        url = Const.TENCENT_STOCK_URL_1
-        url_info = url + code_full
-        html_info = str(self.get_url(url_info.lower()))
-        stockDetail = {}
-        stockInfo = html_info.split('~')
-            # creat database
-            # if __name__ == '__main__':
-            #     dbProvider.dbConn()
-            #     cre_stock_base_db(stock_api_url())
-            #     dbProvider.dbClose()
-
-
-
-
-
+            follows = self.get_xueqiu_follows_daily(code)
+            stock_data = self.get_stock_daily(code_full)
+            self.__dbProvider.add_stock_daliy(follows, stock_data)

@@ -16,6 +16,3 @@ dbProvider = DBProvider()
 #     dbProvider.dbConn()
 #     StockInfo.cre_stock_base_db(StockInfo.stock_api_url())
 #     dbProvider.dbClose()
-
-
-

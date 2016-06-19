@@ -1,5 +1,6 @@
 import sqlite3
 
+
 class DBProvider(object):
 
     def dbConn(self):
@@ -16,12 +17,11 @@ class DBProvider(object):
                 cursor = self.conn.cursor()
             else:
                 raise sqlite3.Error('Connection Error')
-              
+
             n = cursor.execute(sql)
             return n
         except sqlite3.Error:
             print('')
-            
 
     def createStockDB(self):
         try:
@@ -108,7 +108,7 @@ class DBProvider(object):
             cursor.close()
         except sqlite3.Error:
             self.conn.rollback()
-    
+
     def add_stock_base_info(self, data):
         try:
             if(self.conn != None):
@@ -119,10 +119,11 @@ class DBProvider(object):
             sql = '''insert into stock_base (code,name,industry,area,pe,outstanding,totals,totalassets,
              liquidassets,fixedassets,reserved,reservedpershare,eps,bvps,pb,timetomarket)
              values ('%s','%s','%s','%s',%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,'%s')
-             ''' % (data['code'], data['name'], data['industry'], data['area'], data['pe'], data['outstanding'],
-                    data['totals'], data['totalassets'],data['liquidassets'],data['fixedassets'],
-                    data['reserved'],data['reservedpershare'],data['eps'],data['bvps'],data['pb'],data['timetomarket'])
-            
+             ''' % (data[0], data[1], data['industry'], data['area'], data['pe'], data['outstanding'],
+                    data['totals'], data['totalassets'], data[
+                        'liquidassets'], data['fixedassets'],
+                    data['reserved'], data['reservedpershare'], data['eps'], data['bvps'], data['pb'], data['timetomarket'])
+
             cursor.execute(sql)
             self.conn.commit()
             cursor.close()
@@ -145,19 +146,21 @@ class DBProvider(object):
         except sqlite3.Error:
             self.conn.rollback()
 
-    def add_stock_daliy(self, data):
+    def add_stock_daliy(self, follows, data):
         try:
             if (self.conn != None):
                 cursor = self.conn.cursor()
             else:
                 raise sqlite3.Error('Connection Error')
 
-            sql = '''insert into stock_base (code,name,industry,area,pe,outstanding,totals,totalassets,
+            sql = '''insert into ''' + data[0] + ''' (cre_dt,follows,code,name,industry,area,pe,outstanding,totals,totalassets,
              liquidassets,fixedassets,reserved,reservedpershare,eps,bvps,pb,timetomarket)
-             values ('%s','%s','%s','%s',%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,'%s')
-             ''' % (data['code'], data['name'], data['industry'], data['area'], data['pe'], data['outstanding'],
-                    data['totals'], data['totalassets'], data['liquidassets'], data['fixedassets'],
-                    data['reserved'], data['reservedpershare'], data['eps'], data['bvps'], data['pb'],
+             values (date('now'),follows,'%s','%s','%s','%s',%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,'%s')
+             ''' % (data[0], data[1], data['industry'], data['area'], data['pe'], data['outstanding'],
+                    data['totals'], data['totalassets'], data[
+                        'liquidassets'], data['fixedassets'],
+                    data['reserved'], data['reservedpershare'], data[
+                        'eps'], data['bvps'], data['pb'],
                     data['timetomarket'])
 
             cursor.execute(sql)
@@ -166,11 +169,16 @@ class DBProvider(object):
         except sqlite3.Error:
             self.conn.rollback()
 
+    def is_stock_daily_data_existed(self, table, date):
+        try:
+            if(self.conn != None):
+                cursor = self.conn.cursor()
+            else:
+                raise sqlite3.Error('Connection Error')
 
-
-
-
-
-
-
-
+            sql = "select id from %s where cre_dt = '%s'" % (table, date)
+            n = cursor.execute(sql)
+            if n >= 1:
+                return True
+        except sqlite3.Error:
+            print('')
