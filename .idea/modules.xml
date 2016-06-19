@@ -3,7 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/xueqiuFollowersStat.iml" filepath="$PROJECT_DIR$/.idea/xueqiuFollowersStat.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/xueqiuFollowerStat.iml" filepath="$PROJECT_DIR$/.idea/xueqiuFollowerStat.iml" />
+>>>>>>> office
 =======
       <module fileurl="file://$PROJECT_DIR$/.idea/xueqiuFollowerStat.iml" filepath="$PROJECT_DIR$/.idea/xueqiuFollowerStat.iml" />
 >>>>>>> office
