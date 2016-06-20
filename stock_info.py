@@ -6,17 +6,20 @@ from bs4 import BeautifulSoup
 import threading
 import time
 
-import app_const.app_consts as const
+from consts import const
 from db import DBProvider
 
-
+dbProvider = DBProvider()
 class StockInfo:
 
-    def __init__(self):
-        self.__dbProvider = DBProvider
+    def db_conn(self):
+        return dbProvider.dbConn()
+
+    def db_close(self):
+        return dbProvider.dbClose()
 
     def stock_api_url(self):
-        url = const.MAIL_PROTO_IMAP
+        url = const.STOCK_API
         header = const.STOCK_API_HEADER
         req = urllib.request.Request(url=url, headers=header)
         data = urllib.request.urlopen(req).read().decode('utf-8')
@@ -28,19 +31,22 @@ class StockInfo:
         return urllib.request.urlopen(req).read()
 
     def cre_stock_base_db(self, stock_list):
+        dbProvider.createStockDB()
+        print('stock')
         i = 0
         for rows in stock_list['rows']:
-            self.__dbProvider.add_stock_base_info(rows)
+            dbProvider.add_stock_base_info(rows)
             code = rows['code']
-            self.__dbProvider.createIndividStockDB("'" + code + "'")
+            dbProvider.createIndividStockDB("'" + code + "'")
             i = i + 1
             print(i, code)
 
             # print('%s=' % i,rows[i])
         print('-------------------------------')
+        dbProvider.dbClose()
 
     def get_stock_list(self):
-        return self.__dbProvider.get_stock_list()
+        return dbProvider.get_stock_list()
 
     def get_xueqiu_follows_daily(self, code):
         url1 = const.XUEQIU_URL_1
@@ -60,7 +66,7 @@ class StockInfo:
         # print(b[0], code)
 
     def __is_stock_daily_data_exited(self, table, date):
-        return self.__dbProvider.is_stock_daily_data_existed(table, date)
+        return dbProvider.is_stock_daily_data_existed(table, date)
 
     def get_stock_daily(self, code_full):
         url = const.TENCENT_STOCK_URL_1
@@ -77,12 +83,10 @@ class StockInfo:
         if len(stockInfo) < 45:
             return
         if len(stockInfo) != 0 and stockInfo[0].find('pv_none') == -1 and stockInfo[3].find('0.00') == -1:
-            table = self.__stockTables['quotation']
-            code = stockInfo[2]
+            table = stockInfo[2]
             date = stockInfo[30]
             if not self.__is_stock_daily_data_exited(table, date):
                 stock_data['code'] = stockInfo[2]
-                stock_data['name'] = stockInfo[1].decode('utf8')
                 stock_data['price'] = stockInfo[3]
                 stock_data['yesterday_close'] = stockInfo[4]
                 stock_data['today_open'] = stockInfo[5]
@@ -133,4 +137,4 @@ class StockInfo:
                 code_full = 'SZ' + code
             follows = self.get_xueqiu_follows_daily(code)
             stock_data = self.get_stock_daily(code_full)
-            self.__dbProvider.add_stock_daliy(follows, stock_data)
+            dbProvider.add_stock_daliy(follows, stock_data)

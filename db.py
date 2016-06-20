@@ -90,6 +90,7 @@ class DBProvider(object):
                                      sell_four_volume INTEGER,
                                      sell_five DECIMAL(7,3),
                                      sell_five_volume INTEGER,
+                                     date_time DATETIME,
                                      updown FLOAT,
                                      updown_rate FLOAT,
                                      heighest_price DECIMAL(7,3),
@@ -100,7 +101,8 @@ class DBProvider(object):
                                      viberation_rate FLOAT,
                                      circulated_stock DECIMAL(15,3),
                                      total_stock DECIMAL(15,3),
-                                     pb_rate FLOAT
+                                     pb_rate FLOAT,
+                                     update_dt DATE
                                       )
                                       ''' % stockCode
             cursor.execute(sql)
@@ -119,9 +121,8 @@ class DBProvider(object):
             sql = '''insert into stock_base (code,name,industry,area,pe,outstanding,totals,totalassets,
              liquidassets,fixedassets,reserved,reservedpershare,eps,bvps,pb,timetomarket)
              values ('%s','%s','%s','%s',%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,'%s')
-             ''' % (data[0], data[1], data['industry'], data['area'], data['pe'], data['outstanding'],
-                    data['totals'], data['totalassets'], data[
-                        'liquidassets'], data['fixedassets'],
+             ''' % (data['code'], data['name'], data['industry'], data['area'], data['pe'], data['outstanding'],
+                    data['totals'], data['totalassets'], data['liquidassets'], data['fixedassets'],
                     data['reserved'], data['reservedpershare'], data['eps'], data['bvps'], data['pb'], data['timetomarket'])
 
             cursor.execute(sql)
@@ -153,15 +154,14 @@ class DBProvider(object):
             else:
                 raise sqlite3.Error('Connection Error')
 
-            sql = '''insert into ''' + data[0] + ''' (cre_dt,follows,code,name,industry,area,pe,outstanding,totals,totalassets,
-             liquidassets,fixedassets,reserved,reservedpershare,eps,bvps,pb,timetomarket)
-             values (date('now'),follows,'%s','%s','%s','%s',%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,'%s')
-             ''' % (data[0], data[1], data['industry'], data['area'], data['pe'], data['outstanding'],
-                    data['totals'], data['totalassets'], data[
-                        'liquidassets'], data['fixedassets'],
-                    data['reserved'], data['reservedpershare'], data[
-                        'eps'], data['bvps'], data['pb'],
-                    data['timetomarket'])
+            sql = '''insert into ''' + data[0] + ''' (cre_dt,follows,price,yesterday_close,today_open,volume,outer_sell,
+                     inner_buy,buy_one,buy_one_volume,buy_two,buy_two_volume,buy_three,buy_three_volume,buy_four,
+                     buy_four_volume,buy_five,buy_five_volume,sell_one,sell_one_volume,sell_two,sell_two_volume,
+                     sell_three,sell_three_volume,sell_four,sell_four_volume,sell_five,sell_five_volume,date_time,
+                     updown,updown_rate,heighest_price,lowest_price,volume_amout,turnover_rate,pe_rate,viberation_rate,
+                     circulated_stock,total_stock,pb_rate)
+                     values (date('now'),'%s','%s','%s','%s','%s',%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,'%s')
+                     ''' % (follows, data[0], data[1], )
 
             cursor.execute(sql)
             self.conn.commit()

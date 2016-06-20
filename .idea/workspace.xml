@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03b99cee-8a05-46fa-97e6-c366c8a21e92" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consts.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_const/app_consts.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app_const/consts.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/stock_base.db" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IDB_MAIN.db" afterPath="$PROJECT_DIR$/IDB_MAIN.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_const/app_consts.py" afterPath="$PROJECT_DIR$/app_const/app_consts.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app_const/consts.py" afterPath="$PROJECT_DIR$/app_const/consts.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.py" afterPath="$PROJECT_DIR$/db.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock_info.py" afterPath="$PROJECT_DIR$/stock_info.py" />
@@ -24,7 +27,7 @@
     <SUITE FILE_PATH="coverage/xueqiuFollowersStat$db.coverage" NAME="db Coverage Results" MODIFIED="1465554049986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/xueqiuFollowersStat$app_consts.coverage" NAME="app_consts Coverage Results" MODIFIED="1466345009828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/xueqiuFollowerStat$main.coverage" NAME="main Coverage Results" MODIFIED="1465530264722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/xueqiuFollowersStat$main.coverage" NAME="main Coverage Results" MODIFIED="1466094659960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/xueqiuFollowersStat$main.coverage" NAME="main Coverage Results" MODIFIED="1466441503865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/xueqiuFollowersStat$stock_info.coverage" NAME="stock_info Coverage Results" MODIFIED="1466345134598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/xueqiuFollowersStat$consts.coverage" NAME="consts Coverage Results" MODIFIED="1466344944107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -37,46 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding>
-                <element signature="e#1#22#0" expanded="true" />
-                <marker date="1466355607000" expanded="true" signature="201:360" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="consts.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_const/consts.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-              <folding>
-                <marker date="1466355603000" expanded="true" signature="360:443" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app_consts.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_const/app_consts.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="32" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="stock_info.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stock_info.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-600">
-              <caret line="59" column="27" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
+            <state relative-caret-position="150">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -84,18 +52,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="db.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2280">
-              <caret line="152" column="17" selection-start-line="152" selection-start-column="17" selection-end-line="152" selection-end-column="17" />
+            <state relative-caret-position="249">
+              <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
               <folding>
-                <marker date="1466356698000" expanded="true" signature="750:1739" placeholder="create table... stock_base" />
-                <marker date="1466356698000" expanded="true" signature="2171:4590" placeholder="create table... missing_value" />
-                <marker date="1466356698000" expanded="true" signature="5028:5280" placeholder="insert into stock_base... " />
-                <marker date="1466356698000" expanded="true" signature="6014:6047" placeholder="select code,... stock_base" />
-                <marker date="1466356698000" expanded="true" signature="7593:7630" placeholder="select id fr... missing_value" />
+                <marker date="1466441468000" expanded="true" signature="750:1739" placeholder="create table... stock_base" />
+                <marker date="1466441468000" expanded="true" signature="2171:4700" placeholder="create table... missing_value" />
+                <marker date="1466441468000" expanded="true" signature="5138:5390" placeholder="insert into stock_base... " />
+                <marker date="1466441468000" expanded="true" signature="6109:6142" placeholder="select code,... stock_base" />
+                <marker date="1466441468000" expanded="true" signature="7776:7813" placeholder="select id fr... missing_value" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+              <folding>
+                <element signature="e#1#22#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="consts.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consts.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -116,10 +106,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app_consts.py" />
-        <option value="$PROJECT_DIR$/consts.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/app_const/consts.py" />
         <option value="$PROJECT_DIR$/app_const/app_consts.py" />
+        <option value="$PROJECT_DIR$/consts.py" />
+        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/stock_info.py" />
         <option value="$PROJECT_DIR$/db.py" />
       </list>
@@ -132,8 +122,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="8" />
-    <option name="y" value="49" />
+    <option name="x" value="15" />
+    <option name="y" value="24" />
     <option name="width" value="1272" />
     <option name="height" value="733" />
   </component>
@@ -162,7 +152,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -170,15 +160,13 @@
               <option name="myItemId" value="xueqiuFollowersStat" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="xueqiuFollowersStat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="xueqiuFollowersStat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="&lt; Python 3.5.1 (/Library/Frameworks/Python.framework/Versions/3.5/bin/python3.5) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -188,30 +176,27 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="xueqiuFollowersStat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app_const" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/pachong" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app_const" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.stock_info">
+  <component name="RunManager" selected="Python.main">
     <configuration default="false" name="db" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -279,7 +264,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="xueqiuFollowerStat" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app_const/consts.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/consts.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -519,10 +504,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.stock_info" />
-        <item index="1" class="java.lang.String" itemvalue="Python.app_consts" />
-        <item index="2" class="java.lang.String" itemvalue="Python.consts" />
-        <item index="3" class="java.lang.String" itemvalue="Python.main" />
+        <item index="0" class="java.lang.String" itemvalue="Python.main" />
+        <item index="1" class="java.lang.String" itemvalue="Python.stock_info" />
+        <item index="2" class="java.lang.String" itemvalue="Python.app_consts" />
+        <item index="3" class="java.lang.String" itemvalue="Python.consts" />
         <item index="4" class="java.lang.String" itemvalue="Python.db" />
       </list>
     </recent_temporary>
@@ -544,27 +529,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="8" y="49" width="1272" height="733" extended-state="0" />
-    <editor active="true" />
+    <frame x="15" y="24" width="1272" height="733" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23821138" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24227643" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31259722" sideWeight="0.28699186" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3452566" sideWeight="0.49674797" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.49674797" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31259722" sideWeight="0.7130081" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.49674797" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39657855" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17729394" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39657855" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -600,22 +585,69 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="240">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="e#1#22#0" expanded="true" />
-            <marker date="1466355607000" expanded="true" signature="201:360" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_const/consts.py">
+    <entry file="file://$PROJECT_DIR$/consts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_const/app_consts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="32" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stock_info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="59" column="27" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1466441468000" expanded="true" signature="750:1739" placeholder="create table... stock_base" />
+            <marker date="1466441468000" expanded="true" signature="2171:4700" placeholder="create table... missing_value" />
+            <marker date="1466441468000" expanded="true" signature="5138:5390" placeholder="insert into stock_base... " />
+            <marker date="1466441468000" expanded="true" signature="6109:6142" placeholder="select code,... stock_base" />
+            <marker date="1466441468000" expanded="true" signature="7776:7813" placeholder="select id fr... missing_value" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#1#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consts.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-          <folding>
-            <marker date="1466355603000" expanded="true" signature="360:443" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -642,11 +674,11 @@
         <state relative-caret-position="30">
           <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
           <folding>
-            <marker date="1466356698000" expanded="true" signature="750:1739" placeholder="create table... stock_base" />
-            <marker date="1466356698000" expanded="true" signature="2171:4590" placeholder="create table... missing_value" />
-            <marker date="1466356698000" expanded="true" signature="5028:5280" placeholder="insert into stock_base... " />
-            <marker date="1466356698000" expanded="true" signature="6014:6047" placeholder="select code,... stock_base" />
-            <marker date="1466356698000" expanded="true" signature="7593:7630" placeholder="select id fr... missing_value" />
+            <marker date="1466441468000" expanded="true" signature="750:1739" placeholder="create table... stock_base" />
+            <marker date="1466441468000" expanded="true" signature="2171:4700" placeholder="create table... missing_value" />
+            <marker date="1466441468000" expanded="true" signature="5138:5390" placeholder="insert into stock_base... " />
+            <marker date="1466441468000" expanded="true" signature="6109:6142" placeholder="select code,... stock_base" />
+            <marker date="1466441468000" expanded="true" signature="7776:7813" placeholder="select id fr... missing_value" />
           </folding>
         </state>
       </provider>
@@ -657,7 +689,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#1#22#0" expanded="true" />
-            <marker date="1466355607000" expanded="true" signature="201:360" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -674,11 +705,11 @@
         <state relative-caret-position="630">
           <caret line="42" column="41" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
           <folding>
-            <marker date="1466356698000" expanded="true" signature="750:1739" placeholder="create table... stock_base" />
-            <marker date="1466356698000" expanded="true" signature="2171:4590" placeholder="create table... missing_value" />
-            <marker date="1466356698000" expanded="true" signature="5028:5280" placeholder="insert into stock_base... " />
-            <marker date="1466356698000" expanded="true" signature="6014:6047" placeholder="select code,... stock_base" />
-            <marker date="1466356698000" expanded="true" signature="7593:7630" placeholder="select id fr... missing_value" />
+            <marker date="1466441468000" expanded="true" signature="750:1739" placeholder="create table... stock_base" />
+            <marker date="1466441468000" expanded="true" signature="2171:4700" placeholder="create table... missing_value" />
+            <marker date="1466441468000" expanded="true" signature="5138:5390" placeholder="insert into stock_base... " />
+            <marker date="1466441468000" expanded="true" signature="6109:6142" placeholder="select code,... stock_base" />
+            <marker date="1466441468000" expanded="true" signature="7776:7813" placeholder="select id fr... missing_value" />
           </folding>
         </state>
       </provider>
@@ -689,7 +720,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#1#22#0" expanded="true" />
-            <marker date="1466355607000" expanded="true" signature="201:360" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -706,11 +736,11 @@
         <state relative-caret-position="630">
           <caret line="42" column="41" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
           <folding>
-            <marker date="1466356698000" expanded="true" signature="750:1739" placeholder="create table... stock_base" />
-            <marker date="1466356698000" expanded="true" signature="2171:4590" placeholder="create table... missing_value" />
-            <marker date="1466356698000" expanded="true" signature="5028:5280" placeholder="insert into stock_base... " />
-            <marker date="1466356698000" expanded="true" signature="6014:6047" placeholder="select code,... stock_base" />
-            <marker date="1466356698000" expanded="true" signature="7593:7630" placeholder="select id fr... missing_value" />
+            <marker date="1466441468000" expanded="true" signature="750:1739" placeholder="create table... stock_base" />
+            <marker date="1466441468000" expanded="true" signature="2171:4700" placeholder="create table... missing_value" />
+            <marker date="1466441468000" expanded="true" signature="5138:5390" placeholder="insert into stock_base... " />
+            <marker date="1466441468000" expanded="true" signature="6109:6142" placeholder="select code,... stock_base" />
+            <marker date="1466441468000" expanded="true" signature="7776:7813" placeholder="select id fr... missing_value" />
           </folding>
         </state>
       </provider>
@@ -721,7 +751,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#1#22#0" expanded="true" />
-            <marker date="1466355607000" expanded="true" signature="201:360" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -738,11 +767,11 @@
         <state relative-caret-position="405">
           <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
           <folding>
-            <marker date="1466356698000" expanded="true" signature="750:1739" placeholder="create table... stock_base" />
-            <marker date="1466356698000" expanded="true" signature="2171:4590" placeholder="create table... missing_value" />
-            <marker date="1466356698000" expanded="true" signature="5028:5280" placeholder="insert into stock_base... " />
-            <marker date="1466356698000" expanded="true" signature="6014:6047" placeholder="select code,... stock_base" />
-            <marker date="1466356698000" expanded="true" signature="7593:7630" placeholder="select id fr... missing_value" />
+            <marker date="1466441468000" expanded="true" signature="750:1739" placeholder="create table... stock_base" />
+            <marker date="1466441468000" expanded="true" signature="2171:4700" placeholder="create table... missing_value" />
+            <marker date="1466441468000" expanded="true" signature="5138:5390" placeholder="insert into stock_base... " />
+            <marker date="1466441468000" expanded="true" signature="6109:6142" placeholder="select code,... stock_base" />
+            <marker date="1466441468000" expanded="true" signature="7776:7813" placeholder="select id fr... missing_value" />
           </folding>
         </state>
       </provider>
@@ -753,7 +782,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#1#22#0" expanded="true" />
-            <marker date="1466355607000" expanded="true" signature="201:360" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -763,11 +791,11 @@
         <state relative-caret-position="435">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
-            <marker date="1466356698000" expanded="true" signature="750:1739" placeholder="create table... stock_base" />
-            <marker date="1466356698000" expanded="true" signature="2171:4590" placeholder="create table... missing_value" />
-            <marker date="1466356698000" expanded="true" signature="5028:5280" placeholder="insert into stock_base... " />
-            <marker date="1466356698000" expanded="true" signature="6014:6047" placeholder="select code,... stock_base" />
-            <marker date="1466356698000" expanded="true" signature="7593:7630" placeholder="select id fr... missing_value" />
+            <marker date="1466441468000" expanded="true" signature="750:1739" placeholder="create table... stock_base" />
+            <marker date="1466441468000" expanded="true" signature="2171:4700" placeholder="create table... missing_value" />
+            <marker date="1466441468000" expanded="true" signature="5138:5390" placeholder="insert into stock_base... " />
+            <marker date="1466441468000" expanded="true" signature="6109:6142" placeholder="select code,... stock_base" />
+            <marker date="1466441468000" expanded="true" signature="7776:7813" placeholder="select id fr... missing_value" />
           </folding>
         </state>
       </provider>
@@ -778,7 +806,6 @@
           <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
           <folding>
             <element signature="e#1#22#0" expanded="true" />
-            <marker date="1466355607000" expanded="true" signature="201:360" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -788,11 +815,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1466356698000" expanded="true" signature="750:1739" placeholder="create table... stock_base" />
-            <marker date="1466356698000" expanded="true" signature="2171:4590" placeholder="create table... missing_value" />
-            <marker date="1466356698000" expanded="true" signature="5028:5280" placeholder="insert into stock_base... " />
-            <marker date="1466356698000" expanded="true" signature="6014:6047" placeholder="select code,... stock_base" />
-            <marker date="1466356698000" expanded="true" signature="7593:7630" placeholder="select id fr... missing_value" />
+            <marker date="1466441468000" expanded="true" signature="750:1739" placeholder="create table... stock_base" />
+            <marker date="1466441468000" expanded="true" signature="2171:4700" placeholder="create table... missing_value" />
+            <marker date="1466441468000" expanded="true" signature="5138:5390" placeholder="insert into stock_base... " />
+            <marker date="1466441468000" expanded="true" signature="6109:6142" placeholder="select code,... stock_base" />
+            <marker date="1466441468000" expanded="true" signature="7776:7813" placeholder="select id fr... missing_value" />
           </folding>
         </state>
       </provider>
@@ -811,39 +838,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="e#1#22#0" expanded="true" />
-            <marker date="1466355607000" expanded="true" signature="201:360" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_const/app_consts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="32" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="32" />
+        <state relative-caret-position="30">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_const/consts.py">
+    <entry file="file://$PROJECT_DIR$/consts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding>
-            <marker date="1466355603000" expanded="true" signature="360:443" placeholder="..." />
-          </folding>
+        <state relative-caret-position="240">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stock_info.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-600">
-          <caret line="59" column="27" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
+        <state relative-caret-position="150">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -852,14 +866,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2280">
-          <caret line="152" column="17" selection-start-line="152" selection-start-column="17" selection-end-line="152" selection-end-column="17" />
+        <state relative-caret-position="249">
+          <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
           <folding>
-            <marker date="1466356698000" expanded="true" signature="750:1739" placeholder="create table... stock_base" />
-            <marker date="1466356698000" expanded="true" signature="2171:4590" placeholder="create table... missing_value" />
-            <marker date="1466356698000" expanded="true" signature="5028:5280" placeholder="insert into stock_base... " />
-            <marker date="1466356698000" expanded="true" signature="6014:6047" placeholder="select code,... stock_base" />
-            <marker date="1466356698000" expanded="true" signature="7593:7630" placeholder="select id fr... missing_value" />
+            <marker date="1466441468000" expanded="true" signature="750:1739" placeholder="create table... stock_base" />
+            <marker date="1466441468000" expanded="true" signature="2171:4700" placeholder="create table... missing_value" />
+            <marker date="1466441468000" expanded="true" signature="5138:5390" placeholder="insert into stock_base... " />
+            <marker date="1466441468000" expanded="true" signature="6109:6142" placeholder="select code,... stock_base" />
+            <marker date="1466441468000" expanded="true" signature="7776:7813" placeholder="select id fr... missing_value" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding>
+            <element signature="e#1#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
