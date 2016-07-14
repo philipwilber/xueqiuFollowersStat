@@ -161,7 +161,7 @@ class DBProvider(object):
                      updown,updown_rate,heighest_price,lowest_price,volume_amout,turnover_rate,pe_rate,viberation_rate,
                      circulated_stock,total_stock,pb_rate)
                      values (date('now'),'%s','%s','%s','%s','%s',%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,'%s')
-                     ''' % (follows, data[0], data[1], )
+                     ''' % (follows, data['price'], data['yesterday_close'], )
 
             cursor.execute(sql)
             self.conn.commit()

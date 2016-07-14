@@ -11,8 +11,8 @@ from stock_info import StockInfo
 
 
 # creat database
-if __name__ == '__main__':
-    stock = StockInfo()
-    stock.db_conn()
-    stock.cre_stock_base_db(stock.stock_api_url())
-    stock.db_close()
+# if __name__ == '__main__':
+#     stock = StockInfo()
+#     stock.db_conn()
+#     stock.cre_stock_base_db(stock.stock_api_url())
+#     stock.db_close()
