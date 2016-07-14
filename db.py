@@ -131,14 +131,14 @@ class DBProvider(object):
         except sqlite3.Error:
             self.conn.rollback()
 
-    def get_stock_list(self, db):
+    def get_stock_list(self):
         try:
             if (self.conn != None):
                 cursor = self.conn.cursor()
             else:
                 raise sqlite3.Error('Connection Error')
 
-                sql = 'select code, name from stock_base'
+            sql = 'select code, name from stock_base'
             cursor.execute(sql)
             self.conn.commit()
             value = cursor.fetchall()
@@ -147,25 +147,68 @@ class DBProvider(object):
         except sqlite3.Error:
             self.conn.rollback()
 
-    def add_stock_daliy(self, follows, data):
+    def add_stock_daliy(self, date, follows, data):
         try:
             if (self.conn != None):
                 cursor = self.conn.cursor()
             else:
                 raise sqlite3.Error('Connection Error')
 
-            sql = '''insert into ''' + data[0] + ''' (cre_dt,follows,price,yesterday_close,today_open,volume,outer_sell,
+            sql = '''insert into '%s' (cre_dt,follows,price,yesterday_close,today_open,volume,outer_sell,
                      inner_buy,buy_one,buy_one_volume,buy_two,buy_two_volume,buy_three,buy_three_volume,buy_four,
                      buy_four_volume,buy_five,buy_five_volume,sell_one,sell_one_volume,sell_two,sell_two_volume,
                      sell_three,sell_three_volume,sell_four,sell_four_volume,sell_five,sell_five_volume,date_time,
                      updown,updown_rate,heighest_price,lowest_price,volume_amout,turnover_rate,pe_rate,viberation_rate,
                      circulated_stock,total_stock,pb_rate)
-                     values (date('now'),'%s','%s','%s','%s','%s',%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,'%s')
-                     ''' % (follows, data['price'], data['yesterday_close'], )
-
+                     values ('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s',
+                     '%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s',
+                     '%s','%s','%s','%s','%s')
+                     ''' % (data['code'],
+                            date,
+                            follows,
+                            data['price'],
+                            data['yesterday_close'],
+                            data['today_open'],
+                            data['volume'],
+                            data['outer_sell'],
+                            data['inner_buy'],
+                            data['buy_one'],
+                            data['buy_one_volume'],
+                            data['buy_two'],
+                            data['buy_two_volume'],
+                            data['buy_three'],
+                            data['buy_three_volume'],
+                            data['buy_four'],
+                            data['buy_four_volume'],
+                            data['buy_five'],
+                            data['buy_five_volume'],
+                            data['sell_one'],
+                            data['sell_one_volume'],
+                            data['sell_two'],
+                            data['sell_two_volume'],
+                            data['sell_three'],
+                            data['sell_three_volume'],
+                            data['sell_four'],
+                            data['sell_four_volume'],
+                            data['sell_five'],
+                            data['sell_five_volume'],
+                            data['datetime'],
+                            data['updown'],
+                            data['updown_rate'],
+                            data['heighest_price'],
+                            data['lowest_price'],
+                            data['volume_amout'],
+                            data['turnover_rate'],
+                            data['pe_rate'],
+                            data['viberation_rate'],
+                            data['circulated_stock'],
+                            data['total_stock'],
+                            data['pb_rate'])
             cursor.execute(sql)
+            value = cursor.lastrowid
             self.conn.commit()
             cursor.close()
+            return value
         except sqlite3.Error:
             self.conn.rollback()
 
@@ -180,5 +223,7 @@ class DBProvider(object):
             n = cursor.execute(sql)
             if n >= 1:
                 return True
+            else:
+                return False
         except sqlite3.Error:
             print('')

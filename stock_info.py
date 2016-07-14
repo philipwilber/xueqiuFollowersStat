@@ -61,12 +61,16 @@ class StockInfo:
         str_follows = soup_follows.find(
             'div', {'class': 'stockInfo'}).contents
         follows = re.search(r"\((.*?)\)", str(str_follows[1])).groups()
+        return follows[0]
 
-        print(follows[0])
+        # print(follows[0])
         # print(b[0], code)
 
     def __is_stock_daily_data_exited(self, table, date):
-        return dbProvider.is_stock_daily_data_existed(table, date)
+        self.db_conn()
+        value = dbProvider.is_stock_daily_data_existed(table, date)
+        self.db_close()
+        return value
 
     def get_stock_daily(self, code_full):
         url = const.TENCENT_STOCK_URL_1
@@ -127,7 +131,8 @@ class StockInfo:
                 stock_data['pb_rate'] = stockInfo[45]
                 return stock_data
 
-    def add_daily_data(self):
+    def add_daily_data(self, date):
+        self.db_conn()
         stocklist = self.get_stock_list()
         for stock in stocklist:
             code = stock[0]
@@ -137,4 +142,11 @@ class StockInfo:
                 code_full = 'SZ' + code
             follows = self.get_xueqiu_follows_daily(code)
             stock_data = self.get_stock_daily(code_full)
-            dbProvider.add_stock_daliy(follows, stock_data)
+            if(follows != None and stock_data != None):
+                value = dbProvider.add_stock_daliy(date, follows, stock_data)
+                print('%s 加入数据成功 %s' % (code_full, value))
+            else:
+                print('%s 加入数据失败' % code_full)
+
+        self.db_close()
+
