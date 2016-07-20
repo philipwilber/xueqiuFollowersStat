@@ -21,7 +21,7 @@ from stock_info import StockInfo
 if __name__ == '__main__':
      stock = StockInfo()
      # date = datetime.datetime.now().strftime("%Y-%m-%d")
-     date = '2016-07-14'
+     date = '2016-07-20'
      stock.add_daily_data(date)
      # stock.get_stock_daily('SZ300368')
 

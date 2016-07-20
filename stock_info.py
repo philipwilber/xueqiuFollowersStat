@@ -50,12 +50,13 @@ class StockInfo:
 
     def get_xueqiu_follows_daily(self, code):
         url1 = const.XUEQIU_URL_1
-        if code == '6':
-            code = 'SH' + code
-        else:
-            code = 'SZ' + code
+        # if code == '6':
+        #     code = 'SH' + code
+        # else:
+        #     code = 'SZ' + code
 
         url1 = url1 % code
+        # time.sleep(1)
         html_follows = self.get_url(url1)
         soup_follows = BeautifulSoup(html_follows, 'lxml')
         str_follows = soup_follows.find(
@@ -132,21 +133,23 @@ class StockInfo:
                 return stock_data
 
     def add_daily_data(self, date):
-        self.db_conn()
+
         stocklist = self.get_stock_list()
         for stock in stocklist:
+            self.db_conn()
             code = stock[0]
             if code[0] == '6':
                 code_full = 'SH' + code
             else:
                 code_full = 'SZ' + code
-            follows = self.get_xueqiu_follows_daily(code)
+            follows = self.get_xueqiu_follows_daily(code_full)
             stock_data = self.get_stock_daily(code_full)
             if(follows != None and stock_data != None):
                 value = dbProvider.add_stock_daliy(date, follows, stock_data)
                 print('%s 加入数据成功 %s' % (code_full, value))
             else:
                 print('%s 加入数据失败' % code_full)
+            self.db_close()
 
-        self.db_close()
+
 
